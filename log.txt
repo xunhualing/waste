@@ -1,0 +1,103 @@
+023-07-13 20:49:29.043 | INFO     | source.webio.webio:main:48 - webio启动完成
+2023-07-13 20:50:39.508 | INFO     | source.api.pdocr_api:<module>:4 - 正在创建OCR对象
+2023-07-13 20:50:39.568 | CRITICAL | source.api.pdocr_api:<module>:14 - 导入paddleocr时错误; err code: 001
+2023-07-13 20:50:39.572 | ERROR    | source.api.pdocr_api:<module>:15 - FastDeploy initalized failed! Error: DLL load failed: 动态链接库(DLL)初始化例程失败。
+Traceback (most recent call last):
+
+  File "D:\software\PGPL-1.0.3\toolkit\python\3.7.6_GIA_Launcher_Download_Lib\lib\site-packages\fastdeploy\c_lib_wrap.py", line 164, in <module>
+    from .libs.fastdeploy_main import *
+
+ImportError: DLL load failed: 动态链接库(DLL)初始化例程失败。
+
+
+During handling of the above exception, another exception occurred:
+
+
+Traceback (most recent call last):
+
+  File "D:\obj\windows-release\37amd64_Release\msi_python\zip_amd64\threading.py", line 890, in _bootstrap
+
+  File "D:\obj\windows-release\37amd64_Release\msi_python\zip_amd64\threading.py", line 926, in _bootstrap_inner
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\common\base_threading.py", line 170, in run
+    self.loop()
+    │    └ <function TaskManager.loop at 0x000001C235F79B88>
+    └ <TaskManager(TaskManager, started daemon 3188)>
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\task\task_manager.py", line 130, in loop
+    self.start_stop_task(i)
+    │    │               └ 'DomainTask'
+    │    └ <function TaskManager.start_stop_task at 0x000001C235F798B8>
+    └ <TaskManager(TaskManager, started daemon 3188)>
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\task\task_manager.py", line 84, in start_stop_task
+    from source.task.domain.domain_task import DomainTask
+
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\task\domain\domain_task.py", line 2, in <module>
+    from source.task.domain.domain_flow_upgrade import DomainFlowController
+
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\task\domain\domain_flow_upgrade.py", line 4, in <module>
+    from source.combat import combat_controller
+
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\combat\combat_controller.py", line 6, in <module>
+    from source.funclib import combat_lib
+
+  File "<frozen importlib._bootstrap>", line 1035, in _handle_fromlist
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\funclib\combat_lib.py", line 9, in <module>
+    from source.api.pdocr_light import ocr_light
+
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+  File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\api\pdocr_light.py", line 1, in <module>
+    from source.api.pdocr_api import PaddleOcrFastDeploy
+
+  File "<frozen importlib._bootstrap>", line 983, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 967, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 677, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+
+> File "D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\source\api\pdocr_api.py", line 12, in <module>
+    import fastdeploy
+
+  File "D:\software\PGPL-1.0.3\toolkit\python\3.7.6_GIA_Launcher_Download_Lib\lib\site-packages\fastdeploy\__init__.py", line 122, in <module>
+    from .c_lib_wrap import (
+
+  File "D:\software\PGPL-1.0.3\toolkit\python\3.7.6_GIA_Launcher_Download_Lib\lib\site-packages\fastdeploy\c_lib_wrap.py", line 166, in <module>
+    raise RuntimeError(f"FastDeploy initalized failed! Error: {e}")
+
+RuntimeError: FastDeploy initalized failed! Error: DLL load failed: 动态链接库(DLL)初始化例程失败。
+2023-07-13 20:50:39.681 | INFO     | source.api.pdocr_api:<module>:16 - import pdocr time: 0.17
+2023-07-13 20:50:39.699 | INFO     | source.api.pdocr_api:__init__:50 - Creating PaddleOCRFastDeploy object: D:\software\PGPL-1.0.3\repositories\GIA_Launcher_Download_Lib\assets\PPOCRModels\en_US
+2023-07-13 20:50:43.371 | WARNING  | source.generic_event:run:44 - time dilation rate: 0.4907073330684985
